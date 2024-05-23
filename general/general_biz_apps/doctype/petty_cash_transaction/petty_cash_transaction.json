@@ -16,9 +16,11 @@
   "section_break_wg37",
   "inflow",
   "column_break_hktd",
-  "outflow",
+  "exch_rate",
   "column_break_sqsd",
   "amount_in_lc",
+  "column_break_x1ml",
+  "amount_in_fc",
   "title"
  ],
  "fields": [
@@ -77,16 +79,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "inflow",
-   "fieldtype": "Currency",
-   "label": "Amount "
-  },
-  {
-   "fieldname": "outflow",
-   "fieldtype": "Currency",
-   "label": "Amount In Fc"
-  },
-  {
    "fieldname": "section_break_wg37",
    "fieldtype": "Section Break"
   },
@@ -97,13 +89,34 @@
   {
    "fieldname": "amount_in_lc",
    "fieldtype": "Currency",
-   "label": "Amount In LC"
+   "label": "Amount In LC",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_x1ml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exch_rate",
+   "fieldtype": "Currency",
+   "label": "Exch Rate"
+  },
+  {
+   "fieldname": "amount_in_fc",
+   "fieldtype": "Currency",
+   "label": "Amount In Fc",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inflow",
+   "fieldtype": "Currency",
+   "label": "Amount "
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-22 07:04:55.986449",
+ "modified": "2024-03-27 13:29:41.158396",
  "modified_by": "Administrator",
  "module": "General Biz Apps",
  "name": "Petty Cash Transaction",

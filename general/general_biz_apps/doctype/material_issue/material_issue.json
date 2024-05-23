@@ -24,6 +24,7 @@
   "column_break_hktd",
   "item_group",
   "qty_out",
+  "expense_account",
   "column_break_sqsd",
   "uom",
   "warehouse",
@@ -185,12 +186,18 @@
    "fieldname": "customer_name",
    "fieldtype": "Data",
    "label": "Customer Name"
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-13 05:40:05.395389",
+ "modified": "2024-03-28 16:21:29.283473",
  "modified_by": "Administrator",
  "module": "General Biz Apps",
  "name": "Material Issue",

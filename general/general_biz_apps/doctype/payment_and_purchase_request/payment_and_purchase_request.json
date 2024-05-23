@@ -34,6 +34,9 @@
   "column_break_tsj8",
   "requesting_department",
   "column_break_ybja",
+  "project",
+  "column_break_ikpc",
+  "project_name",
   "list_of_invoices_section",
   "get_unpaid_invoices",
   "outstanding_purchase_invoices",
@@ -254,12 +257,28 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_ikpc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-29 21:46:58.395845",
+ "modified": "2024-05-09 00:24:28.998254",
  "modified_by": "Administrator",
  "module": "General Biz Apps",
  "name": "Payment and Purchase Request",

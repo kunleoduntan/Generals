@@ -119,6 +119,7 @@
   {
    "fieldname": "customer_type",
    "fieldtype": "Select",
+   "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Transaction Type",
@@ -129,7 +130,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.customer_type != 'Revenue Receipting'",
    "fieldname": "customer_id",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -201,7 +201,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "create_accounting_entries",
    "fieldtype": "Check",
    "label": "Create Accounting Entries"
@@ -271,17 +271,17 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Cheque / Ref No",
-   "length": 5
+   "length": 8,
+   "reqd": 1
   },
   {
-   "depends_on": "eval:doc.customer_type == 'Revenue Receipting'",
-   "description": "Enter Revenue Ac. if transaction is not amortised else enter Deferred Revenue Account",
+   "description": "Enter Revenue Ac. if transaction is not amortized else enter Deferred Revenue Account\n",
    "fieldname": "account_to_credit",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Account To Credit",
-   "mandatory_depends_on": "eval:doc.customer_type == 'Revenue Receipting'",
+   "mandatory_depends_on": "eval: doc.customer_type == \"Revenue Receipting\" || doc.customer_type == \"Transfer In\"",
    "options": "Account"
   },
   {
@@ -294,6 +294,7 @@
    "label": "Amount In Words"
   },
   {
+   "depends_on": "amortise ",
    "fieldname": "amortization_settings_section",
    "fieldtype": "Section Break",
    "label": "Amortization Settings",
@@ -442,7 +443,7 @@
    "fieldname": "authorised_by",
    "fieldtype": "Link",
    "label": "Authorised By",
-   "options": "Employee"
+   "options": "User"
   },
   {
    "fieldname": "column_break_b8hs",
@@ -462,7 +463,7 @@
    "fieldname": "approved_by",
    "fieldtype": "Link",
    "label": "Approved By",
-   "options": "Employee"
+   "options": "User"
   },
   {
    "fieldname": "column_break_g6wm",
@@ -567,7 +568,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-02 06:06:11.700427",
+ "modified": "2024-04-11 17:37:42.939687",
  "modified_by": "Administrator",
  "module": "General Biz Apps",
  "name": "Receipts",

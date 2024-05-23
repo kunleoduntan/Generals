@@ -97,8 +97,7 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Amount",
-   "read_only_depends_on": "eval:doc.transaction_currency !== \"NGN\""
+   "label": "Amount"
   },
   {
    "depends_on": "eval: doc.trans_currency == \"NGN\"",
@@ -193,6 +192,7 @@
    "fieldtype": "Link",
    "in_filter": 1,
    "in_list_view": 1,
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Cost Center",
    "mandatory_depends_on": "eval:in_list([\"Payment\", \"Receipt\"], doc.trans_type)\r\n",
@@ -348,7 +348,6 @@
    "fieldtype": "Data",
    "label": "Cheque /Ref No",
    "length": 5,
-   "unique": 1,
    "width": "120"
   },
   {
@@ -400,7 +399,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-19 12:36:22.088741",
+ "modified": "2024-04-02 21:06:51.766329",
  "modified_by": "Administrator",
  "module": "General Biz Apps",
  "name": "Transaction Entry",

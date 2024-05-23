@@ -8,14 +8,15 @@
  "field_order": [
   "service_code",
   "service_name",
+  "title",
   "column_break_mr7q",
   "price",
   "external_code",
-  "column_break_inmy",
   "item_group",
+  "column_break_inmy",
   "uom",
   "income_account",
-  "title"
+  "expense_account"
  ],
  "fields": [
   {
@@ -85,17 +86,24 @@
   },
   {
    "fieldname": "income_account",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Income Account"
+   "label": "Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-08 20:25:06.897948",
+ "modified": "2024-03-31 21:26:51.899185",
  "modified_by": "Administrator",
  "module": "General Biz Apps",
  "name": "Packaged Service Item",
